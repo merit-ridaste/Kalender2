@@ -19,6 +19,7 @@ public class AddSyndmus {
             //see kood siin
             Syndmus syndmus = new Syndmus();
             syndmus.kysiMinuInfo();
+            //lisasin mingi kommentaari testimiseks
             selleleSaalile.getSyndmused().add(syndmus);
             //viimase reaga tehakse alati i++
         }
