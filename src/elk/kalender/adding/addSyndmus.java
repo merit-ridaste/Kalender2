@@ -19,11 +19,7 @@ public class AddSyndmus {
         for(int i = 0; i < mitusyndmust; i++){
             //see kood siin
             Syndmus syndmus = new Syndmus();
-            try {
-                syndmus.kysiMinuInfo();
-            }catch (ParseException e){
-                throw new RuntimeException(e.getMessage());
-            }
+            syndmus.kysiMinuInfo();
 
             selleleSaalile.getSyndmused().add(syndmus);
             //viimase reaga tehakse alati i++
