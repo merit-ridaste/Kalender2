@@ -1,5 +1,7 @@
 package elk.kalender.objects;
 
+import elk.kalender.commons.InputAsker;
+
 import java.util.Scanner;
 
 /**
@@ -26,16 +28,11 @@ public class Rekvisiit {
         this.kirjeldus = kirjeldus;
     }
 
+
     public void kysiMinuInfo() {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Sisesta uue rekvisiidi nimi: ");
-        String sisseloetud_nimi = scanner.next();
-        nimi = sisseloetud_nimi;
-
-        System.out.print("Sisesta uue rekvisiidi kirjeldus: ");
-        String sisseloetud_kirjeldus = scanner.next();
-        kirjeldus = sisseloetud_nimi;
+        nimi = InputAsker.getAsker().askString("Sisesta uue rekvisiidi nimi:");
+        kirjeldus = InputAsker.getAsker().askString("Sisesta uue rekvisiidi kirjeldus:");
 
     }
 }

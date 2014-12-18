@@ -1,8 +1,8 @@
 package elk.kalender.objects;
 
-import com.sun.org.apache.xalan.internal.xsltc.dom.ArrayNodeListIterator;
+import elk.kalender.commons.Commons;
+import elk.kalender.commons.InputAsker;
 
-import java.sql.Time;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.Scanner;
@@ -16,29 +16,18 @@ public class Syndmus {
     private String nimi;
     private String kirjeldus;
     private Kestvus kestvus;
+    private Kontakt kontakt;
 
+    public void kysiMinuInfo() {
 
-    public void kysiMinuInfo() throws ParseException{
-        Scanner scanner = new Scanner(System.in);
+        nimi = InputAsker.getAsker().askString("Sisesta uue syndmuse nimi:");
+        kirjeldus = InputAsker.getAsker().askString("Sisesta syndmuse kirjledus:");
 
-        System.out.print("Sisesta uue syndmuse nimi:");
-        String sisseloetud_nimi = scanner.next();
-        nimi = sisseloetud_nimi;
+        kestvus = new Kestvus();
+        kestvus.kysiMinuInfo();
 
-        scanner = new Scanner(System.in);
-        System.out.print("Sisesta syndmuse kirjledus: ");
-        String sisseloetud_kirjeldus = scanner.next();
-        kirjeldus = sisseloetud_kirjeldus;
-
-        System.out.print("Sisesta algus aasta, kuu, kuupäev ja kellaeg ");
-        String sisseloetud_Date= scanner.next();
-        Date date = Commons.getDateFormat().parse(sisseloetud_Date);
-        kestvus.setAlgus(date);
-
-        System.out.print("Sisesta algus aasta, kuu, kuupäev ja kellaeg ");
-        sisseloetud_Date= scanner.next();
-        date = Commons.getDateFormat().parse(sisseloetud_Date);
-        kestvus.setL6pp(date);
+        kontakt = new Kontakt();
+        kontakt.kysiMinuInfo();
     }
 
     public void joonistaMindASCIIs(){

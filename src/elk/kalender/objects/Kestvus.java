@@ -1,5 +1,7 @@
 package elk.kalender.objects;
 
+import elk.kalender.commons.InputAsker;
+
 import java.util.Date;
 
 /**
@@ -23,5 +25,10 @@ public class Kestvus {
 
     public void setAlgus(Date algus) {
         this.algus = algus;
+    }
+
+    public void kysiMinuInfo(){
+        setAlgus(InputAsker.getAsker().askDate("Sisesta kuupäev (yyyy/mm/dd/H/m) ja kellaeg (H/m)"));
+        setL6pp(InputAsker.getAsker().askDate("Siseta l6pu (yyyy/mm/dd/H/m) ja kellaeg (H/m)"));
     }
 }

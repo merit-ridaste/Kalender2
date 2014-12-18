@@ -1,5 +1,7 @@
 package elk.kalender.objects;
 
+import elk.kalender.commons.InputAsker;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -54,16 +56,25 @@ public class Saal {
 
     public void kysiMinuInfo()
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Sisesta Saali nimi: ");
-        String sisseloetud_nimi = scanner.next();
-        nimi = sisseloetud_nimi;
-
-        System.out.print("Sisesta Saali aadress; ");
-        String sisseloetud_asukoht = scanner.next();
-        asukoht = sisseloetud_asukoht;
+        nimi = InputAsker.getAsker().askString("Sisesta saali nimi:");
+        asukoht = InputAsker.getAsker().askString ("Sisesta Saali aadress");
+        pindala = InputAsker.getAsker().askNumber("Sisesta saali pindala");
+        k6rgus = InputAsker.getAsker().askNumber("Sisesta saali k6rgus");
+        kysiRekvisiidid();
+    }
+    public void kysiRekvisiidid(){
+        if(rekvisiidid == null) {
+            rekvisiidid = new ArrayList<Rekvisiit>();
+        }
+        int mitur = InputAsker.getAsker().askNumber("Mitu rekvisiiti soovid?");
+        for (int i=0 ;mitur > i ;i++){
+            Rekvisiit rekvisiit = new Rekvisiit();
+            rekvisiit.kysiMinuInfo();
+            rekvisiidid.add(rekvisiit);
+        }
 
     }
+
 
 
     }
