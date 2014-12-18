@@ -3,6 +3,7 @@ package elk.kalender.adding;
 import elk.kalender.objects.Saal;
 import elk.kalender.objects.Syndmus;
 
+import java.text.ParseException;
 import java.util.Scanner;
 
 /**
@@ -18,8 +19,12 @@ public class AddSyndmus {
         for(int i = 0; i < mitusyndmust; i++){
             //see kood siin
             Syndmus syndmus = new Syndmus();
-            syndmus.kysiMinuInfo();
-            //lisasin mingi kommentaari testimiseks
+            try {
+                syndmus.kysiMinuInfo();
+            }catch (ParseException e){
+                throw new RuntimeException(e.getMessage());
+            }
+
             selleleSaalile.getSyndmused().add(syndmus);
             //viimase reaga tehakse alati i++
         }
