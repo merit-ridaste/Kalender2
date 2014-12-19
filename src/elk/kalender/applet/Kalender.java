@@ -10,7 +10,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Created by meritridaste on 19/12/14.
+ * Esindab joonistatavat osa programmist.
  */
 public class Kalender {
 
