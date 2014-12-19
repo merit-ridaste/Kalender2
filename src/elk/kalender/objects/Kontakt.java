@@ -5,7 +5,7 @@ import elk.kalender.commons.InputAsker;
 import java.util.Scanner;
 
 /**
- * Created by meritridaste on 15/12/14.
+ *  Hoiab kontaktinfot.
  */
 public class Kontakt {
     private long id;
@@ -14,7 +14,7 @@ public class Kontakt {
     private String telefoniNumber;
     private String firmaNimi;
 
-    public String getNimi() {return nimi;}
+   /* public String getNimi() {return nimi;}
     public String getEmail() {return email;}
     public String gettelefoninumber() {return telefoniNumber;}
     public String getFirmaNimi() {return firmaNimi;}
@@ -23,7 +23,11 @@ public class Kontakt {
     public void setEmail (String email){this.email = email;}
     public void setTelefoniNumber(String telefoniNumber) { this.telefoniNumber = telefoniNumber;}
     public void setFirmaNimi(String firmaNimi) { this.firmaNimi = firmaNimi;}
+*/
 
+    /**
+     * Küsib kasutajalt kontakt info.
+     */
     public void kysiMinuInfo() {
         Scanner scanner = new Scanner(System.in);
 

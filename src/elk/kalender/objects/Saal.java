@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * this class represents a room in the training area.
+ * Hoiab infot saali kohta.
  */
 public class Saal {
 
@@ -19,10 +19,7 @@ public class Saal {
     private ArrayList<Syndmus> syndmused;
     private ArrayList<Kontakt> kontaktid;
 
-    /**
-     * this lets you get the "values"
-     //* @return pindala as integer
-     */
+
     public String getNimi() {return nimi;}
     public String getAsukoht() {return asukoht;}
     public int getPindala() {return pindala;}
@@ -31,10 +28,6 @@ public class Saal {
     public ArrayList<Syndmus> getSyndmused() {return syndmused;}
     public ArrayList<Kontakt> getKontaktid(){return kontaktid;}
 
-    /**
-     * this lets you set the "values"
-     * @param (pindala) as integer.
-     */
     public void setNimi( String nimi) { this.nimi = nimi;}
     public void setAsukoht(String asukoht){this.asukoht = asukoht;}
     public void setPindala(int pindala) { this.pindala = pindala;}
@@ -47,6 +40,9 @@ public class Saal {
         this.syndmused = syndmused;
     }
 
+    /**
+     * Küsib kasutajalt saali infot.
+     */
     public void kysiMinuInfo()
     {
         nimi = InputAsker.getAsker().askString("Sisesta saali nimi:");

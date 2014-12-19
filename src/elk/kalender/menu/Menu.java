@@ -3,15 +3,13 @@ package elk.kalender.menu;
 import elk.kalender.applet.AppletFrame;
 import elk.kalender.applet.Kalender;
 import elk.kalender.commons.InputAsker;
-import elk.kalender.objects.Kestvus;
 import elk.kalender.objects.Rekvisiit;
 import elk.kalender.objects.Saal;
 import elk.kalender.objects.Syndmus;
 
 import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
+
 
 /**
  * Menuu tegeleb üldise voo juhtimisega.

@@ -1,15 +1,11 @@
 package elk.kalender.objects;
 
-import elk.kalender.commons.Commons;
-import elk.kalender.commons.InputAsker;
 
-import java.text.ParseException;
+import elk.kalender.commons.InputAsker;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
 
 /**
- * Created by meritridaste on 05/12/14.
+ * Kirjeldab toimuvat sündmust.
  */
 public class Syndmus {
 
@@ -68,7 +64,7 @@ public class Syndmus {
     }
 
 
-    public void kysiRekvisiidid(){
+   /* public void kysiRekvisiidid(){
         if(rekvisiidid == null) {
             rekvisiidid = new ArrayList<Rekvisiit>();
         }
@@ -79,5 +75,5 @@ public class Syndmus {
             rekvisiidid.add(rekvisiit);
         }
 
-    }
+    }*/
 }

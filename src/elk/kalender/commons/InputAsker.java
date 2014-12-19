@@ -1,13 +1,12 @@
 package elk.kalender.commons;
 
-import com.javafx.tools.doclets.internal.toolkit.util.DocFinder;
 
 import java.text.ParseException;
 import java.util.Date;
 import java.util.Scanner;
 
 /**
- * Created by meritridaste on 18/12/14.
+ * Tegeleb kasutajalt info küsimisega.
  */
 public class InputAsker {
 
@@ -18,6 +17,10 @@ public class InputAsker {
     private InputAsker(){
     }
 
+    /**
+     * haldab InputAskerit kasutades singleton patternit
+     * @return Jagab InputAskerit.
+     */
     public static InputAsker getAsker(){
         if(asker == null){
             asker = new InputAsker();
@@ -28,7 +31,11 @@ public class InputAsker {
         }
     }
 
-
+    /**
+     * Küsib kasutajalt kuupäeva.
+     * @param s6num, s6num mida kasutajalae kuvatakse.
+     * @return
+     */
     public Date askDate(String s6num){
         System.out.print(s6num);
         String sisseloetud_Date = scanner.nextLine();
@@ -40,6 +47,11 @@ public class InputAsker {
         }
     }
 
+    /**
+     * Küsitakse kasutajalt reaalarvu.
+     * @param s6num s6num kuvatakse kasutajale
+     * @return
+     */
     public Integer askNumber(String s6num) {
         System.out.println(s6num);
         String input = scanner.nextLine();
@@ -53,6 +65,11 @@ public class InputAsker {
 
     }
 
+    /**
+     * Küsib kasutajalt infot.
+     * @param s6num s6num kuvatakse kasutajale.
+     * @return
+     */
     public String askString (String s6num){
         System.out.println( s6num);
         String input = scanner.nextLine();

@@ -5,7 +5,7 @@ import elk.kalender.commons.InputAsker;
 import java.util.Date;
 
 /**
- * Created by meritridaste on 18/12/14.
+ * Kirjeldab ühe sündmuse kestvust.
  */
 public class Kestvus {
     private Date algus;
@@ -27,6 +27,9 @@ public class Kestvus {
         this.algus = algus;
     }
 
+    /**
+     * Küsib algus ja lõpptähtaega kasutajalt.
+     */
     public void kysiMinuInfo(){
         setAlgus(InputAsker.getAsker().askDate("Sisesta kuupäev ja kellaeg(yyyy/mm/dd/H/m)"));
         setL6pp(InputAsker.getAsker().askDate("Siseta l6pu kuupäev ja kellaeg(yyyy/mm/dd/H/m)"));

@@ -3,14 +3,12 @@ package elk.kalender.applet;
 import elk.kalender.commons.Commons;
 import elk.kalender.objects.Saal;
 import elk.kalender.objects.Syndmus;
-import org.w3c.dom.css.Counter;
-
 import java.awt.*;
 import java.util.Calendar;
-import java.util.Date;
+
 
 /**
- * Esindab joonistatavat osa programmist.
+ * Joonistab kalendri tausta pildi.
  */
 public class Kalender {
 

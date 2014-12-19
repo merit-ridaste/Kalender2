@@ -5,7 +5,7 @@ import elk.kalender.commons.InputAsker;
 import java.util.Scanner;
 
 /**
- * Created by meritridaste on 15/12/14.
+ * Kirjeldab rekvisiite.
  */
 public class Rekvisiit {
     private int id;
