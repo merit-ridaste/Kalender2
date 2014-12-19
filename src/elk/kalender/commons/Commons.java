@@ -10,5 +10,7 @@ public class Commons {
         return new SimpleDateFormat("yyyy/mm/dd/H/m");
     }
 
-
+    public static SimpleDateFormat getCalendarDateFormat(){
+        return new SimpleDateFormat("E H:mm");
+    }
 }

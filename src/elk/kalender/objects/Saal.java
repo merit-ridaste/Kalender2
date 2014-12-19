@@ -18,7 +18,6 @@ public class Saal {
 
     private ArrayList<Syndmus> syndmused;
     private ArrayList<Kontakt> kontaktid;
-    private ArrayList<Rekvisiit> rekvisiidid;
 
     /**
      * this lets you get the "values"
@@ -30,9 +29,6 @@ public class Saal {
     public int getK6rgus() {return k6rgus;}
 
     public ArrayList<Syndmus> getSyndmused() {return syndmused;}
-    public ArrayList<Rekvisiit> getRekvisiidid() {
-        return rekvisiidid;
-    }
     public ArrayList<Kontakt> getKontaktid(){return kontaktid;}
 
     /**
@@ -44,9 +40,6 @@ public class Saal {
     public void setPindala(int pindala) { this.pindala = pindala;}
     public void setK6rgus (int k6rgus) { this.k6rgus = k6rgus;}
 
-    public void setRekvisiidid(ArrayList<Rekvisiit> rekvisiidid) {
-        this.rekvisiidid = rekvisiidid;
-    }
     public void setKontaktid(ArrayList<Kontakt>kontaktid) {
         this.kontaktid = kontaktid;
     }
@@ -60,24 +53,11 @@ public class Saal {
         asukoht = InputAsker.getAsker().askString ("Sisesta Saali aadress");
         pindala = InputAsker.getAsker().askNumber("Sisesta saali pindala");
         k6rgus = InputAsker.getAsker().askNumber("Sisesta saali k6rgus");
-        kysiRekvisiidid();
-    }
-    public void kysiRekvisiidid(){
-        if(rekvisiidid == null) {
-            rekvisiidid = new ArrayList<Rekvisiit>();
-        }
-        int mitur = InputAsker.getAsker().askNumber("Mitu rekvisiiti soovid?");
-        for (int i=0 ;mitur > i ;i++){
-            Rekvisiit rekvisiit = new Rekvisiit();
-            rekvisiit.kysiMinuInfo();
-            rekvisiidid.add(rekvisiit);
-        }
-
     }
 
 
 
-    }
+}
 
 
 

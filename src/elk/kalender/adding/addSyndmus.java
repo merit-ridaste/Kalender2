@@ -1,9 +1,12 @@
 package elk.kalender.adding;
 
+import elk.kalender.commons.InputAsker;
+import elk.kalender.objects.Rekvisiit;
 import elk.kalender.objects.Saal;
 import elk.kalender.objects.Syndmus;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**

@@ -28,7 +28,7 @@ public class Kestvus {
     }
 
     public void kysiMinuInfo(){
-        setAlgus(InputAsker.getAsker().askDate("Sisesta kuupäev (yyyy/mm/dd/H/m) ja kellaeg (H/m)"));
-        setL6pp(InputAsker.getAsker().askDate("Siseta l6pu (yyyy/mm/dd/H/m) ja kellaeg (H/m)"));
+        setAlgus(InputAsker.getAsker().askDate("Sisesta kuupäev ja kellaeg(yyyy/mm/dd/H/m)"));
+        setL6pp(InputAsker.getAsker().askDate("Siseta l6pu kuupäev ja kellaeg(yyyy/mm/dd/H/m)"));
     }
 }

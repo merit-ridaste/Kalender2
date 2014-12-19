@@ -48,8 +48,7 @@ public class InputAsker {
             return number;
         } catch (NumberFormatException e) {
             System.out.println(e.getMessage());
-            askNumber(s6num);
-            return null;
+            return askNumber(s6num);
         }
 
     }
